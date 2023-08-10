@@ -1,0 +1,62 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.parke.parke.MapsActivity"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="118dp"
+        android:layout_height="34dp"
+        android:checked="false"
+        android:contentDescription="@string/satellite"
+        android:text="@string/satellite"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:visibility="visible"
+        map:layout_anchor="@+id/map"
+        map:layout_anchorGravity="top|center"
+        tools:layout_editor_absoluteX="8dp"
+        tools:text="Satellite" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/togglebutton"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textOff="@string/track"
+        android:textOn="@string/tracking"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        map:layout_anchor="@+id/map"
+        map:layout_anchorGravity="right|bottom" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        map:layout_anchor="@+id/map"
+        map:layout_anchorGravity="right|center"
+        map:srcCompat="@android:drawable/ic_menu_info_details"
+        tools:layout_editor_absoluteX="301dp"
+        android:contentDescription="@string/infobutton" />
+
+
+</android.support.design.widget.CoordinatorLayout>
